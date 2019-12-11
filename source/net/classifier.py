@@ -80,7 +80,7 @@ class DepthPredictionNet(nn.Module):
         self.conv2 = nn.Conv2d(64, 1, kernel_size=3, stride=1, padding=1)
         self.dropout1 = nn.Dropout2d(p= 0.5, inplace=False)
         self.conv2.weight.data.normal_(0.0, 0.01)
-        self.upsample = nn.UpsamplingBilinear2d(size=(228, 304))
+        self.upsample = nn.UpsamplingBilinear2d(size=(256, 512))
 
     def forward(self, a_input):
         """

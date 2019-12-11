@@ -8,8 +8,9 @@ class TrainTestLoader(torch.utils.data.Dataset):
     def __init__(self, type):
         self.dataset = datasetSorter(type)
         self.transform = transforms.Compose([transforms.ToTensor(),transforms.ToPILImage(),
-                                             transforms.Resize(size=(240, 320), interpolation=1),
-                                              transforms.CenterCrop(size=(228, 304)), transforms.ToTensor()])
+                                             transforms.Resize(size=(256, 512), interpolation=1),
+                                              # transforms.CenterCrop(size=(228, 304)),
+                                              transforms.ToTensor()])
 
     def __len__(self):
         return self.dataset.len()
