@@ -351,10 +351,10 @@ class Processor(object):
                 torch.save(self.model.state_dict(),
                            os.path.join('./model_output/',
                                         'epoch{}_acc{:.2f}_model.pth.tar'.format(epoch, 1)))
-        pickle.dump(self.train_loss_save, open('../data/train_dump.txt', 'wb'))
+        pickle.dump(self.train_loss_save, open('data/train_dump.txt', 'wb'))
 
 
-        pickle.dump(self.cross_loss_save, open('../data/cross_dump.txt', 'wb'))
+        pickle.dump(self.cross_loss_save, open('data/cross_dump.txt', 'wb'))
 
     # The function is not being used. So lets not care about this for now.
     def test(self):

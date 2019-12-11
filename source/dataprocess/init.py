@@ -3,9 +3,9 @@ import os
 import glob
 
 ## setting the path
-path_labels = '/dataset/gtFine_trainvaltest/gtFine'
-path_images = '/dataset/leftImg8bit_trainvaltest/leftImg8bit'
-path_depth = '/dataset/disparity_trainvaltest/disparity'
+path_labels = '/home/nantha07/dataset/gtFine_trainvaltest/gtFine'
+path_images = '/home/nantha07/dataset/leftImg8bit_trainvaltest/leftImg8bit'
+path_depth = '/home/nantha07/dataset/disparity_trainvaltest/disparity'
 
 dir_list_train = os.listdir(path_labels + '/train')
 dir_list_test = os.listdir(path_labels + '/test')
